@@ -87,9 +87,13 @@ COLOR_CYAN="\[\e[0;36m\]"
 COLOR_LCYAN="\[\e[1;36m\]"
 
 export PS1="${COLOR_CLEAR}
-\t ${COLOR_GREEN}\u${COLOR_CLEAR}@${COLOR_LCYAN}\h
-${COLOR_YELLOW}\w${COLOR_CLEAR} \$(git_ps1_info)
+\t ${COLOR_YELLOW}\w${COLOR_CLEAR} \$(git_ps1_info)
 ${COLOR_LGREEN}→${COLOR_CLEAR} "
+
+#export PS1="${COLOR_CLEAR}
+#\t ${COLOR_GREEN}\u${COLOR_CLEAR}@${COLOR_LCYAN}\h
+#${COLOR_YELLOW}\w${COLOR_CLEAR} \$(git_ps1_info)
+#${COLOR_LGREEN}→${COLOR_CLEAR} "
 
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
