@@ -3,7 +3,6 @@
 #- Running chsh -s /usr/local/bin/bash.
 
 source ~/.sources/*.source
-source ~/.nvm/nvm.sh
 source ~/.bashrc
 
 function growl() { echo -e $'\e]9;'${1}'\007' ; return ; }
