@@ -1,7 +1,7 @@
 set nocompatible              " be iMproved, required
 execute pathogen#infect()
 syntax on
-filetype plugin indent on
+filetype plugin indent on   
 
 set noerrorbells                " No beeps
 set backspace=indent,eol,start  " Makes backspace key more powerful.
@@ -40,6 +40,7 @@ set number                      " Show line numbers
 set norelativenumber		" Show numbers relative to current line
 
 set textwidth=0 wrapmargin=0
+set nowrap " Don't wrap lines
 
 "let g:js_indent_log=1
 nnoremap <Leader>m :w <BAR> !lessc % > %:p:r.css<CR><space>
@@ -61,12 +62,13 @@ function! ClearUndo()
 endfunction
 map <Leader>dU :call ClearUndo()<CR>
 
-
 " base16 color
 set background=dark
 let base16colorspace=256
 colorscheme base16-default
+
 set t_Co=256
+
 " enable ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp
 " helps activete vim-airline
