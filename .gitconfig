@@ -42,6 +42,10 @@
 	vsn = "!bash -c 'X=\"${0/bash/}\"; git d --name-only origin/${X:-$(git rev-parse --abbrev-ref HEAD)}..'"
 	wiff = "!sh -c 'GIT_PAGER=\"\" git d --ignore-space-at-eol --ignore-space-change --word-diff'"
 	wiffc = "!sh -c 'GIT_PAGER=\"\" git d --ignore-space-at-eol --ignore-space-change --word-diff --cached'"
+	# the acronym stands for "subtree add"
+	sba = "!f() { git subtree add --prefix $2 $1 master --squash; }; f"
+	# the acronym stands for "subtree update"
+	sbu = "!f() { git subtree pull --prefix $2 $1 master --squash; }; f"
 
 [color]
 	diff = auto
