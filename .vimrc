@@ -1,7 +1,7 @@
+set nocompatible              " be iMproved, required
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
-syntax enable
 
 set noerrorbells                " No beeps
 set backspace=indent,eol,start  " Makes backspace key more powerful.
@@ -60,12 +60,12 @@ function! ClearUndo()
 endfunction
 map <Leader>dU :call ClearUndo()<CR>
 
-set t_Co=256
 
 " base16 color
 set background=dark
 let base16colorspace=256
 colorscheme base16-default
+set t_Co=256
 " enable ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp
 " helps activete vim-airline
@@ -77,6 +77,8 @@ let g:indent_guides_start_level=1
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_auto_colors=0
 let g:indent_guides_guide_size=1
-hi IndentGuidesOdd   ctermbg=black
-hi IndentGuidesEven  ctermbg=black
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=16 guibg=#000000 "rgb=0,0,0
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=233 guibg=#121212 "rgb=18,18,18
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234 guibg=#1c1c1c "rgb=28,28,28
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235 guibg=#262626 "rgb=38,38,38
 let g:js_indent_log = 0
