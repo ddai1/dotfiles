@@ -1,0 +1,6 @@
+startup_message off 
+autodetach on
+hardstatus off #alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{g}][%{B} %m/%d %{W}%c %{g}]'
+caption always "%{= kw}                  %?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}]"
+vbell off
