@@ -47,6 +47,7 @@ nnoremap <Leader>m :w <BAR> !lessc % > %:p:r.css<CR><space>
 let g:is_bash=1
 
 map <F7> mzgg=G`z<CR>
+nmap <F8> :TagbarToggle<CR>
 
 function! ClearUndo()
 	let choice = confirm("Clear undo information?", "&Yes\n&No", 2)
