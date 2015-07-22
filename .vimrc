@@ -93,5 +93,3 @@ let g:js_indent_log = 0
 
 let g:html_exclude_tags = ['html', 'style', 'script', 'body']
 
-let g:airline_enable_branch     = 1
-
