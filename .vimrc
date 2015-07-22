@@ -1,7 +1,7 @@
 set nocompatible              " be iMproved, required
 execute pathogen#infect()
 syntax on
-filetype plugin indent on   
+filetype plugin indent on
 
 set noerrorbells                " No beeps
 set backspace=indent,eol,start  " Makes backspace key more powerful.
@@ -27,7 +27,7 @@ set smartcase                   " ... but not when search pattern contains upper
 
 set switchbuf=usetab,newtab     " open new buffers always in new tabs
 
-nnoremap <F3> :set invpaste paste?<CR> 
+nnoremap <F3> :set invpaste paste?<CR>
 set pastetoggle=<F3>
 
 let g:ctrlp_custom_ignore = '\.vagrant\|\.git\|node_modules\|DS_Store\|bower_components\|platforms'
