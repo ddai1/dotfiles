@@ -92,3 +92,6 @@ let g:js_indent_log = 0
 "let g:CoffeeAutoTagTagRelative=<0 or 1>  " Sets file names to the relative path from the tag file location to the tag file location (Default: 1 [true])
 
 let g:html_exclude_tags = ['html', 'style', 'script', 'body']
+
+let g:airline_enable_branch     = 1
+
