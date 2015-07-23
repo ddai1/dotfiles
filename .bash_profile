@@ -20,9 +20,21 @@ function sum_files() {
   fi
   find . -type f -iname "${MASK}" -exec du '{}' \; | awk '{print $1}' | paste -s -d '+' - | bc | awk '{GB=$1/1024/1024; print GB}'
 }
+function aa_16 () {
+for clbg in {40..47} {100..107} 49 ; do
+  #Foreground
+  for clfg in {30..37} {90..97} 39 ; do
+    #Formatting
+    for attr in 0 1 2 4 5 7 ; do
+      #Print the result
+      echo -en "\e[${attr};${clbg};${clfg}m ^[${attr};${clbg};${clfg}m \e[0m"
+    done
+    echo #Newline
+  done
+done
+}
 # might need this: tset xterm-256color
-function aa_256 ()
-{
+function aa_256 () {
   ( x=`tput op` y=`printf %$((${COLUMNS}-6))s`;
   for i in {0..256};
   do
