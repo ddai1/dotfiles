@@ -36534,7 +36534,7 @@
 	<key>HideScrollbar</key>
 	<true/>
 	<key>HideTab</key>
-	<true/>
+	<false/>
 	<key>HighlightTabLabels</key>
 	<true/>
 	<key>HotKeyBookmark</key>
@@ -36581,7 +36581,11 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>269 110 924 485 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 3 1410 874 0 0 1440 877 </string>
+	<string>0 429 570 448 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>0 28 1410 842 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 2</key>
+	<string>0 13 1410 864 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -44666,7 +44670,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>459114399.62752199</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>459114399.62779802</real>
+	<real>459290421.93134803</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -44733,7 +44737,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-07-21T05:45:56Z</date>
+	<date>2015-07-21T16:56:02Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>

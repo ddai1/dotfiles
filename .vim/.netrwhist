@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/Users/phadviger/test'
 let g:netrw_dirhist_2='/Users/phadviger/.dotfiles/.git'
 let g:netrw_dirhist_3='/Users/phadviger/apprunner/marklar/test'
+let g:netrw_dirhist_4='/Users/phadviger/apprunner/epiquery/templates/marklar'
