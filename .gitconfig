@@ -46,6 +46,8 @@
 	sba = "!f() { git subtree add --prefix $2 $1 master --squash; }; f"
 	# the acronym stands for "subtree update"
 	sbu = "!f() { git subtree pull --prefix $2 $1 master --squash; }; f"
+	# find all remote branches already in master
+	merged = branch -r --merged
 
 [color]
 	diff = auto
