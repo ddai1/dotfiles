@@ -12,6 +12,7 @@
 [merge]
 	renameLimit = 5000
 [alias]
+	bc = branch --contains
 	cleanup = "!sh -c 'git rm $(git ls-files —deleted)'"
 	cob = "!sh -c 'git checkout $(git branch -r | awk '\"'\"'{FS=\"[/]\";} {if ($0 !~ /HEAD/) {print $2;} }'\"'\"' | percol)'"
 	cmp = "!sh -c 'git log --left-right --oneline --no-merges --pretty=format:\"%m %Cred%h%Creset - %s %Cgreen(%an - %cr)%Creset %C(yellow)%d%Creset\" $0...'"

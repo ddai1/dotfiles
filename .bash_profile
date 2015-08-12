@@ -64,6 +64,11 @@ else
   git branch --no-color --merged | grep -v "\*" | while read BRANCH; do echo "${BRANCH}" ; done
 fi
 }
+function git_branch_age () {
+#for k in `git -r branch|sed s/^..//`;do echo -e `git log -1 --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" "$k"`\\t"$k";done|sort
+#git for-each-ref --sort='-authordate' --format='%(refname)%09%(authordate)' refs/remotes/origin | sed -e 's-refs/remotes/origin/--'
+:
+}
 function webshare () {
 local PORT=8001
 while lsof -iTCP@0.0.0.0:$PORT >> /dev/null 2>&1;
