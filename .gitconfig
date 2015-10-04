@@ -14,7 +14,7 @@
 [alias]
 	bc = branch --contains
 	cleanup = "!sh -c 'git rm $(git ls-files —deleted)'"
-	cob = "!sh -c 'git checkout $(git branch -r | awk '\"'\"'{FS=\"[/]\";} {if ($0 !~ /HEAD/) {print $2;} }'\"'\"' | percol)'"
+	cob = "!bash -c 'git checkout $(git branch -a | awk '\"'\"'{FS=\"[/]\";} {gsub(/remotes\\/[^\\/]+\\//, \"\"); gsub(/[\t *]/, \"\"); if ($0 !~ /HEAD/) {print $1;} }'\"'\"' | sort -ui | percol)'"
 	cmp = "!sh -c 'git log --left-right --oneline --no-merges --pretty=format:\"%m %Cred%h%Creset - %s %Cgreen(%an - %cr)%Creset %C(yellow)%d%Creset\" $0...'"
 	crs = clone --recurse-submodules
 	d = diff --ignore-space-at-eol --ignore-space-change
@@ -70,3 +70,10 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[user]
+	name = Philip Hadviger
+	email = phadviger@glgroup.com

@@ -5,6 +5,7 @@
 source ~/.sources/*.source
 source ~/.bashrc
 
+function osx_bundle() { defaults read "/Applications/${@}.app/Contents/Info.plist" CFBundleIdentifier; }
 function growl() { echo -e $'\e]9;'${1}'\007' ; return ; }
 function cwd() { cd "$(dirname $(which "${1}"))"; }
 # Note, this function is only needed on OSX, linux has du -h | sort -h that can be used
@@ -134,6 +135,9 @@ alias ctree='\tree -a -I .git'
 #history + percol - date
 alias hp="history | percol | awk '{\$1=\$2=\$3=\"\"; print \$0;}'"
 
+#git diff for non-repo files
+alias diff="git diff --no-index"
+
 # -A      List all entries except for . and ...  Always set for the super-user.
 # -F      Display a slash ('/') immediately after each pathname that is a directory, an asterisk ('*') after each that is executable, an at sign ('@') after each symbolic link,
 #         an equals sign ('=') after each socket, a percent sign ('%') after each whiteout, and a vertical bar ('|') after each that is a FIFO.
@@ -155,4 +159,5 @@ alias offload00="rsync -avzr --exclude '.fseventsd' --exclude '.DS_Store' --excl
 alias extract00='find -E . -type f -iregex ".*(mov|m4v|mp4)" -exec rsync -avR --remove-source-files {} /tmp/test \;'
 alias docker_shell='eval "$(boot2docker shellinit)"'
 alias mailserver='sudo python -m smtpd -n -c DebuggingServer localhost:25'
+alias clone_backup="caffeinate -i rsync -av --delete --exclude '.fseventsd' --exclude '.DS_Store' --exclude '*.Trashes*' --exclude '.Spotlight*' --exclude '.DocumentRevisions-*' /Volumes/BackupOne/ /Volumes/BackupTwo"
 

@@ -30,7 +30,11 @@ set switchbuf=usetab,newtab     " open new buffers always in new tabs
 nnoremap <F3> :set invpaste paste?<CR>
 set pastetoggle=<F3>
 
-let g:ctrlp_custom_ignore = '\.vagrant\|\.git\|node_modules\|DS_Store\|bower_components\|platforms'
+let g:ctrlp_custom_ignore = '\.vagrant\|\.git$\|node_modules\|DS_Store\|bower_components\|platforms'
+"let g:ctrlp_custom_ignore = {
+  "\ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc$',
+  "\ 'file': '\.exe$\|\.so$\|\.dat$'
+  "\ }
 let g:ctrlp_dotfiles = 1
 
 map <Leader><Space> :let @/=""<CR>
