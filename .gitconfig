@@ -32,7 +32,7 @@
 	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
 	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
 	m = merge --no-ff --no-commit
-	mergelog = log --oneline --decorate --graph 
+	mergelog = log --oneline --decorate --graph
 	ms = merge --squash
 	s = status -uall -s -b
 	ss = submodule status --recursive
@@ -51,7 +51,6 @@
 	merged = branch -r --merged
 
 [color]
-	diff = auto
 	status = auto
 	branch = auto
 
@@ -60,13 +59,19 @@
 	changed = cyan
 	untracked = red
 
+[color "diff"]
+	meta = blue
+	frag = magenta
+	old = red
+	new = green
+
 [help]
 	format = html
 [web]
 	browser = open
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
