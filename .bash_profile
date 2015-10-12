@@ -160,4 +160,4 @@ alias extract00='find -E . -type f -iregex ".*(mov|m4v|mp4)" -exec rsync -avR --
 alias docker_shell='eval "$(boot2docker shellinit)"'
 alias mailserver='sudo python -m smtpd -n -c DebuggingServer localhost:25'
 alias clone_backup="caffeinate -i rsync -av --delete --exclude '.fseventsd' --exclude '.DS_Store' --exclude '*.Trashes*' --exclude '.Spotlight*' --exclude '.DocumentRevisions-*' /Volumes/BackupOne/ /Volumes/BackupTwo"
-
+alias nl="npm list -depth=0"

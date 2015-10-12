@@ -97,3 +97,4 @@ let g:js_indent_log = 0
 
 let g:html_exclude_tags = ['html', 'style', 'script', 'body']
 
+au BufRead,BufNewFile *.tag setfiletype html
