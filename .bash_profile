@@ -2,7 +2,11 @@
 #- Adding /usr/local/bin/bash to /etc/shells
 #- Running chsh -s /usr/local/bin/bash.
 
-source ~/.sources/*.source
+for FILE in ~/.sources/*.source; do
+  if [[ -f "${FILE}" ]]; then
+    source "${FILE}"
+  fi
+done
 source ~/.bashrc
 source ~/code/mintty-colors-solarized/sol.dark
 
