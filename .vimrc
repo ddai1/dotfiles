@@ -67,9 +67,9 @@ endfunction
 map <Leader>dU :call ClearUndo()<CR>
 
 " base16 color
-set background=dark
-let base16colorspace=256
-colorscheme base16-default
+"set background=dark
+"let base16colorspace=256
+"colorscheme base16-default
 
 set t_Co=256
 

@@ -4,6 +4,7 @@
 
 source ~/.sources/*.source
 source ~/.bashrc
+source ~/code/mintty-colors-solarized/sol.dark
 
 function osx_bundle() { defaults read "/Applications/${@}.app/Contents/Info.plist" CFBundleIdentifier; }
 function growl() { echo -e $'\e]9;'${1}'\007' ; return ; }
