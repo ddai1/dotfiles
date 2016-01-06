@@ -2,13 +2,16 @@
 #- Adding /usr/local/bin/bash to /etc/shells
 #- Running chsh -s /usr/local/bin/bash.
 
+
 for FILE in ~/.sources/*.source; do
   if [[ -f "${FILE}" ]]; then
     source "${FILE}"
   fi
 done
 source ~/.bashrc
-source ~/code/mintty-colors-solarized/sol.dark
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 function osx_bundle() { defaults read "/Applications/${@}.app/Contents/Info.plist" CFBundleIdentifier; }
 function growl() { echo -e $'\e]9;'${1}'\007' ; return ; }
