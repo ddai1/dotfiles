@@ -1,2 +1,12 @@
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
+alias mirror00="rsync -avzr --delete --exclude '.fseventsd' --exclude '.DS_Store' --exclude '*.Trashes*' --exclude '.Spotlight*' /Volumes/Backup/ /Volumes/Pc/_mirror"
+alias offload00="rsync -avzr --exclude '.fseventsd' --exclude '.DS_Store' --exclude '*.Trashes*' --exclude '.Spotlight*' /tmp/test/* /Volumes/Backup/Extract"
+alias extract00='find -E . -type f -iregex ".*(mov|m4v|mp4)" -exec rsync -avR --remove-source-files {} /tmp/test \;'
+
+alias clone_backup="caffeinate -i rsync -av --delete --exclude '.fseventsd' --exclude '.DS_Store' --exclude '*.Trashes*' --exclude '.Spotlight*' --exclude '.DocumentRevisions-*' /Volumes/BackupOne/ /Volumes/BackupTwo"
+
+# Flush DNS on Lion + Mountain Lion
+alias flushdns="sudo killall -HUP mDNSResponder"
+# vi: set ft=sh :

@@ -3,11 +3,51 @@
 #- Running chsh -s /usr/local/bin/bash.
 
 
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+#calculator with math support
+alias bc='bc -l'
+
+#sha1 digest
+#alias sha1='openssl sha1'
+
+#show a nice path
+alias path='echo -e ${PATH//:/\\n}'
+
+#show a code tree
+alias ctree='\tree -a -I .git'
+
+#history + percol - date
+alias hp="history | percol | awk '{\$1=\$2=\$3=\"\"; print \$0;}'"
+
+#git diff for non-repo files
+alias diff="git diff --no-index"
+
+# -A      List all entries except for . and ...  Always set for the super-user.
+# -F      Display a slash ('/') immediately after each pathname that is a directory, an asterisk ('*') after each that is executable, an at sign ('@') after each symbolic link,
+#         an equals sign ('=') after each socket, a percent sign ('%') after each whiteout, and a vertical bar ('|') after each that is a FIFO.
+# -G      Enable colorized output.
+# -h      When used with the -l option, use unit suffixes: Byte, Kilobyte, Megabyte, Gigabyte, Terabyte and Petabyte in order to reduce the number of digits to three or less
+#         using base 2 for sizes.
+alias ls="ls -AFGh"
+# ls -d1 */	# list directories in current dir
+# ls -1 M*	# list directories only starting with M
+# \ls		# ingore alias for ls
+
+alias mux='tmux has && tmux -2 attach || tmux -2 new'
+
+alias docker_shell='eval "$(boot2docker shellinit)"'
+alias mailserver='sudo python -m smtpd -n -c DebuggingServer localhost:25'
+alias nl="npm list -depth=0"
+
 for FILE in ~/.sources/*.source; do
   if [[ -f "${FILE}" ]]; then
     source "${FILE}"
   fi
 done
+
 source ~/.bashrc
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
@@ -124,48 +164,3 @@ ${COLOR_LGREEN}→${COLOR_CLEAR} "
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
 
-alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
-
-#calculator with math support
-alias bc='bc -l'
-
-#sha1 digest
-#alias sha1='openssl sha1'
-
-#show a nice path
-alias path='echo -e ${PATH//:/\\n}'
-
-#show a code tree
-alias ctree='\tree -a -I .git'
-
-#history + percol - date
-alias hp="history | percol | awk '{\$1=\$2=\$3=\"\"; print \$0;}'"
-
-#git diff for non-repo files
-alias diff="git diff --no-index"
-
-# -A      List all entries except for . and ...  Always set for the super-user.
-# -F      Display a slash ('/') immediately after each pathname that is a directory, an asterisk ('*') after each that is executable, an at sign ('@') after each symbolic link,
-#         an equals sign ('=') after each socket, a percent sign ('%') after each whiteout, and a vertical bar ('|') after each that is a FIFO.
-# -G      Enable colorized output.
-# -h      When used with the -l option, use unit suffixes: Byte, Kilobyte, Megabyte, Gigabyte, Terabyte and Petabyte in order to reduce the number of digits to three or less
-#         using base 2 for sizes.
-alias ls="ls -AFGh"
-# ls -d1 */	# list directories in current dir
-# ls -1 M*	# list directories only starting with M
-# \ls		# ingore alias for ls
-
-# Flush DNS on Lion + Mountain Lion
-alias flushdns="sudo killall -HUP mDNSResponder"
-
-alias mux='tmux has && tmux -2 attach || tmux -2 new'
-
-alias mirror00="rsync -avzr --delete --exclude '.fseventsd' --exclude '.DS_Store' --exclude '*.Trashes*' --exclude '.Spotlight*' /Volumes/Backup/ /Volumes/Pc/_mirror"
-alias offload00="rsync -avzr --exclude '.fseventsd' --exclude '.DS_Store' --exclude '*.Trashes*' --exclude '.Spotlight*' /tmp/test/* /Volumes/Backup/Extract"
-alias extract00='find -E . -type f -iregex ".*(mov|m4v|mp4)" -exec rsync -avR --remove-source-files {} /tmp/test \;'
-alias docker_shell='eval "$(boot2docker shellinit)"'
-alias mailserver='sudo python -m smtpd -n -c DebuggingServer localhost:25'
-alias clone_backup="caffeinate -i rsync -av --delete --exclude '.fseventsd' --exclude '.DS_Store' --exclude '*.Trashes*' --exclude '.Spotlight*' --exclude '.DocumentRevisions-*' /Volumes/BackupOne/ /Volumes/BackupTwo"
-alias nl="npm list -depth=0"
