@@ -1,5 +1,4 @@
 if [[ "${OS}" == "Windows_NT" ]]; then
-  echo "Setting up SSH agent from Windows"
   if [ -f ${HOME}/.ssh-agent ]; then
     . ${HOME}/.ssh-agent > /dev/null
   fi
@@ -7,7 +6,10 @@ if [[ "${OS}" == "Windows_NT" ]]; then
     /usr/bin/ssh-agent > ${HOME}/.ssh-agent
     . ${HOME}/.ssh-agent > /dev/null
   fi
-  ssh-add ~/.ssh/id_rsa
+  if [[ $(ssh-add -L | wc -l) -eq 0 ]]; then
+    echo "Adding SSH key to agent"
+    ssh-add ~/.ssh/id_rsa
+  fi
 
   alias ls="\\ls -AFGh --color"
 fi
