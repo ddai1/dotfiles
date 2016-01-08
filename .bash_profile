@@ -161,3 +161,10 @@ alias docker_shell='eval "$(boot2docker shellinit)"'
 alias mailserver='sudo python -m smtpd -n -c DebuggingServer localhost:25'
 alias clone_backup="caffeinate -i rsync -av --delete --exclude '.fseventsd' --exclude '.DS_Store' --exclude '*.Trashes*' --exclude '.Spotlight*' --exclude '.DocumentRevisions-*' /Volumes/BackupOne/ /Volumes/BackupTwo"
 alias nl="npm list -depth=0"
+alias ag="ag --ignore 'node_modules'"
+
+alias spotlight_off="sudo mdutil -a -i off"
+alias spotlight_on="sudo mdutil -a -i on"
+alias spotlight_bustcache="sudo rm -rf /.Spotlight-V100/*"
+alias tm_local_off="sudo tmutil disablelocal"
+alias tm_local_on="sudo tmutil enablelocal"
