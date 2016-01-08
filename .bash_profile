@@ -98,7 +98,7 @@ function nvmrc () {
   local CURRENT_VERSION="$(node -v)"
   local DESIRED_VERSION="$(<.nvmrc)"
   if [[ "${CURRENT_VERSION//[$'\r\t\n v']}" != "${DESIRED_VERSION//[$'\r\t\n v']}" ]]; then
-    echo "${DESIRED_VERSION#*v}"
+    nvm use "${DESIRED_VERSION//[$'\r\t\n v']}"
   fi
 }
 export PROMPT_COMMAND="nvmrc"
