@@ -164,3 +164,10 @@ ${COLOR_LGREEN}→${COLOR_CLEAR} "
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
 
+alias ag="ag --ignore 'node_modules'"
+
+alias spotlight_off="sudo mdutil -a -i off"
+alias spotlight_on="sudo mdutil -a -i on"
+alias spotlight_bustcache="sudo rm -rf /.Spotlight-V100/*"
+alias tm_local_off="sudo tmutil disablelocal"
+alias tm_local_on="sudo tmutil enablelocal"
