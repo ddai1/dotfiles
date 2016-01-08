@@ -1,0 +1,16 @@
+if [[ "${OS}" == "Windows_NT" ]]; then
+  if [ -f ${HOME}/.ssh-agent ]; then
+    . ${HOME}/.ssh-agent > /dev/null
+  fi
+  if [ -z "$SSH_AGENT_PID" -o -z "`/usr/bin/ps -a|/usr/bin/egrep \"^[ ]+$SSH_AGENT_PID\"`" ]; then
+    /usr/bin/ssh-agent > ${HOME}/.ssh-agent
+    . ${HOME}/.ssh-agent > /dev/null
+  fi
+  if [[ $(ssh-add -L | wc -l) -eq 0 ]]; then
+    echo "Adding SSH key to agent"
+    ssh-add ~/.ssh/id_rsa
+  fi
+
+  alias ls="\\ls -AFGh --color"
+fi
+# vi: ft=sh :
