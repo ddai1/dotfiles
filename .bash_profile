@@ -42,6 +42,8 @@ alias docker_shell='eval "$(boot2docker shellinit)"'
 alias mailserver='sudo python -m smtpd -n -c DebuggingServer localhost:25'
 alias nl="npm list -depth=0"
 
+alias hgrep='history | cut -d " " -f 6-'
+
 for FILE in ~/.sources/*.source; do
   if [[ -f "${FILE}" ]]; then
     source "${FILE}"
