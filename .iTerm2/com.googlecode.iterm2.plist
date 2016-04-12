@@ -31,7 +31,7 @@
 	<key>CopyLastNewline</key>
 	<false/>
 	<key>CopySelection</key>
-	<true/>
+	<false/>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>Monokai Soda</key>
@@ -36579,11 +36579,11 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame Preferences</key>
-	<string>269 110 924 485 0 0 1440 877 </string>
+	<string>519 161 924 485 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 13 1410 864 0 0 1440 877 </string>
+	<string>1 186 1438 864 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 13 1410 864 0 0 1440 877 </string>
+	<string>0 3 1648 1024 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>0 13 1410 864 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
@@ -44665,12 +44665,14 @@
 			<string>/Users/phadviger/projects/cmp</string>
 		</dict>
 	</array>
+	<key>NoSyncHaveShownPromoWithId_4</key>
+	<true/>
 	<key>NoSyncNeverRemindPrefsChangesCopy</key>
 	<true/>
 	<key>NoSyncTimeOfLastPromo</key>
-	<real>459114399.62752199</real>
+	<real>477897102.37044501</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>466571037.26289099</real>
+	<real>478426405.70416999</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -44737,7 +44739,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-10-16T04:17:05Z</date>
+	<date>2016-02-29T05:42:14Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>

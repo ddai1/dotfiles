@@ -16,4 +16,6 @@ alias spotlight_bustcache="sudo rm -rf /.Spotlight-V100/*"
 alias tm_local_off="sudo tmutil disablelocal"
 alias tm_local_on="sudo tmutil enablelocal"
 alias reset_app_store="defaults write com.apple.appstore ShowDebugMenu -bool true"
+
+alias wireless_networks="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -s"
 # vi: set ft=sh :

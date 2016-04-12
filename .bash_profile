@@ -130,6 +130,17 @@ done
 python -m SimpleHTTPServer $PORT
 }
 
+function gitroot () {
+git rev-parse --git-dir > /dev/null 2>&1 || return
+while [[ ! -d ".git/" ]]; do
+  cd ..
+done
+}
+
+function arlog () {
+tail -F /var/log/system.log | \grep --line-buffered --color=always "${1}\[" | cut -d " " -f 3,6-
+}
+
 # History date format
 export HISTTIMEFORMAT="%y/%m/%d %T "
 # Ignore dupliate commands even if there is a space difference, and don't save them to history

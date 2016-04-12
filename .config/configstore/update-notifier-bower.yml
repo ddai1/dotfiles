@@ -1,2 +1,7 @@
 optOut: false
-lastUpdateCheck: 1454647553902
+lastUpdateCheck: 1456802254007
+update:
+  latest: 1.7.7
+  current: 1.7.0
+  type: patch
+  name: bower
