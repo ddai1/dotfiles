@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/Users/ddai1'
+let g:netrw_dirhist_1='/Users/ddai1/function-bash'
+let g:netrw_dirhist_0='/Users/ddai1/gitcode/aws-infrastructure/china/glginc-cn/staging/_gs'
+let g:netrw_dirhist_9='/Users/ddai1/gitcode/aws-infrastructure-1/marketing/glginsights-com/staging/modules/elasticache'
+let g:netrw_dirhist_8='/Users/ddai1/gitcode/aws-infrastructure-1/marketing/glginsights-com/staging/modules'
+let g:netrw_dirhist_7='/Users/ddai1/gitcode/aws-infrastructure-2/marketing/shared-infrastructure/modules/acm'
+let g:netrw_dirhist_6='/Users/ddai1/gitcode/aws-infrastructure-2/marketing/shared-infrastructure/modules'
+let g:netrw_dirhist_5='/Users/ddai1/gitcode/aws-infrastructure-2/marketing/shared-infrastructure/modules/acm'
+let g:netrw_dirhist_4='/Users/ddai1/gitcode/ccrepos/gds.china.clusterconfig.s52/auth'
+let g:netrw_dirhist_3='/Users/ddai1/gitcode/eda-routing-config-dev/test-ddai-bus/rules'
